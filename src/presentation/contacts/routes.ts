@@ -28,5 +28,4 @@ export class ContactRoutes {
     return router;
   }
 
-
 }

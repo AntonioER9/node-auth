@@ -1,6 +1,6 @@
-import { ContactDto } from '../../dtos/contact.dto';
-import { ContactEntity } from '../../entities/contact.entity';
-import { ContactsRepository } from '../../repositories/contact.repository';
+import { ContactDto } from '../../dtos/auth/register-user.dto';
+import { ContactEntity } from '../../entities/user.entity';
+import { ContactsRepository } from '../../repositories/auth.repository';
 
 interface CreateContactUseCase {
   execute: ( contactDto: ContactDto ) => Promise<ContactEntity|undefined>

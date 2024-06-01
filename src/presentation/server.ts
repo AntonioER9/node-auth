@@ -5,8 +5,6 @@ interface StartOptions {
   routes: Router;
 }
 
-
-
 export class Server {
 
   private app = express();
@@ -22,10 +20,8 @@ export class Server {
     //     message: 'Hello world',
     //   })
     // });
-
     
     this.app.use(options.routes);
-
 
     this.app.listen( options.port, () => {
       console.log(`Server listening on port ${options.port}`);
@@ -35,7 +31,7 @@ export class Server {
 
   private setupMiddlewares() {
     this.app.use(express.json());
+    this.app.use(express.urlencoded({extended: true}));
   }
-
 
 }

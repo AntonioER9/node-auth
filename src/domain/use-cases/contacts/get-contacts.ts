@@ -1,5 +1,5 @@
-import { ContactEntity } from '../../entities/contact.entity';
-import { ContactsRepository } from '../../repositories/contact.repository';
+import { ContactEntity } from '../../entities/user.entity';
+import { ContactsRepository } from '../../repositories/auth.repository';
 
 interface GetContactsUseCase {
   execute: () => Promise<ContactEntity[]>

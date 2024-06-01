@@ -7,7 +7,7 @@ interface Props {
 
 
 
-export class ContactEntity {
+export class UserEntity {
 
   public id: string;
   public name: string;

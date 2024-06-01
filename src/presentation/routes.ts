@@ -1,6 +1,5 @@
 import { Router } from 'express'
-import { ContactRoutes } from './contacts';
-
+import { AuthRoutes } from './auth/routes';
 
 export class AppRoutes {
   
@@ -8,13 +7,9 @@ export class AppRoutes {
   static get routes(): Router {
     
     const router = Router();
-
-    router.use('/contacts', ContactRoutes.routes );
-    
-    // router.use('/students', studentRoutes);
-    // router.use('/classes', classRoutes);
+    // Definir todas mis rutas principales.
+    router.use('/api/auth', AuthRoutes.routes );
 
     return router;
   }
 }
-  
