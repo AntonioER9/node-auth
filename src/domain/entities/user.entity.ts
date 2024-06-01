@@ -1,35 +1,13 @@
-interface Props {
-  id: string;
-  name: string;
-  email: string;
-  createdAt: Date;
-}
-
-
-
 export class UserEntity {
 
-  public id: string;
-  public name: string;
-  public email: string;
-  public createdAt: Date;
+  constructor(
+    public id: string,
+    public name: string,
+    public email: string,
+    public password: string,
+    public role: string[],
+    public img?: string,
 
+  ) {}
 
-  constructor( props: Props ) {
-    this.validateProps( props );
-    
-    const { id, name, email, createdAt } = props;
-    this.id = id;
-    this.name = name;
-    this.email = email;
-    this.createdAt = createdAt;
-  }
-
-
-  validateProps( props: Props ) {
-    const { id, name, email, createdAt } = props;
-    if ( !id || !name || !email || !createdAt ) {
-      throw new Error(`Invalid props`);
-    }
-  }
 }
