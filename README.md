@@ -1,18 +1,19 @@
+## Proyecto de Arquitectura Limpia con NodeJS
 
-# Clase en vivo Agosto 2023
-## Express + TypeScript + CleanCode + Clean Architecture
+### Instalación
 
-# Dev
-
-1. Clonar archivo ```.env.template``` por ```.env```
-2. Pueden usar esas variables de entorno
+1. Clonar archivo **.env.template** y renombrar a **.env**.
+2. Instalar dependencias.
+```bash
+npm install
+```
 3. Levantar la base de datos
+```bash
+docker-compose up -d
 ```
-docker compose up -d
+
+4. Ejecutar proyecto en modo desarrollo
+```bash
+npm run dev
 ```
-4. Instalar las dependencias ```npm install```
-5. Correr en modo de desarrollo ```npm run dev```
 
-
-## Notas
-[Repositorio del código](https://github.com/Klerith/node-ts-express-clean)
